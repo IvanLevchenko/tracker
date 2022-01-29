@@ -1,0 +1,121 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+$main_blue: rgb(70, 92, 219);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.App {
+  text-align: center;
+
+  .header {
+    background: $main_blue;
+    padding: 5px;
+    color: white;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .main {
+    text-align: center;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .activity-items {
+      width: 60%;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        width: 95%;
+        margin: 5px;
+      }
+    }
+
+    .statistics {
+      width: 35%;
+      color: white;
+
+      @media (max-width: 768px) {
+        width: 95%;
+        margin: 5px;
+      }
+
+      .statistics-main {
+        background: $main_blue;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+
+        .statistics-main__ride {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            margin: auto;
+          }
+        }
+
+        .statistics-main__run {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            margin: auto;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+      }
+
+      .statistics-total {
+        background: $main_blue;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+
+        .statistics-total__ride {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            margin: auto;
+          }
+        }
+
+        .statistics-total__run {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            margin: auto;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+$border_color: rgb(241, 241, 241);
+
+.activity-form {
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  margin-top: 20px;
+  max-width: 1300px;
+  // border: 1px solid;
+
+  .activity-form__header {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .activity-form__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px solid $border_color;
+    padding: 10px;
+
+    @media (max-width: 1350px) {
+      flex-wrap: wrap;
+      padding: 0;
+
+      button {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .activity-form__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-left: 1px solid $border_color;
+      padding-left: 30px;
+
+      @media (max-width: 1350px) {
+        width: 50%;
+        align-items: flex-start;
+
+        &:nth-child(3) {
+          border-top: 1px solid $border_color;
+          border-bottom: 1px solid $border_color;
+        }
+
+        &:nth-child(4) {
+          border-left: 1px solid $border_color;
+        }
+
+        &:nth-child(4) {
+          border-bottom: 1px solid $border_color;
+          border-top: 1px solid $border_color;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+        border-top: 1px solid $border_color;
+
+        &:nth-child(1) {
+          border: none;
+        }
+        &:nth-child(2) {
+          border-top: 1px solid $border_color;
+        }
+        &:nth-child(3) {
+          border-top: 1px solid $border_color;
+          border-bottom: 0;
+        }
+        &:nth-child(4) {
+          border-top: 1px solid $border_color;
+        }
+
+        input {
+          margin: 5px;
+        }
+      }
+
+      &:nth-child(1) {
+        border: none;
+      }
+
+      label {
+        margin: auto;
+        margin-left: 0;
+        font-weight: bold;
+      }
+
+      input {
+        width: 210px;
+        text-indent: 5px;
+        height: 50px;
+        font-size: 16px;
+        border: none;
+      }
+
+      select {
+        width: 210px;
+        text-indent: 5px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+      }
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+      font-size: 15px;
+      border-radius: 10px;
+
+      // @media (max-width: 1350px) {
+      //   margin-top: 15px;
+      // }
+    }
+  }
+}
+
+// @media (max-width: 1350px) {
+//   .activity-form__body {
+//     flex-wrap: wrap;
+
+//     .activity-form__item {
+//       width: 50%;
+//       border: 1px solid red;
+//     }
+//   }
+// }
