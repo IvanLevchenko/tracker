@@ -8,7 +8,7 @@ const createActivity = async (req, res) => {
       time: req.body.payload.timeResult,
       velocity: req.body.payload.velocity,
     })
-    res.status(200)
+    res.status(200).send('created')
   } catch (e) {
     console.log(e)
   }

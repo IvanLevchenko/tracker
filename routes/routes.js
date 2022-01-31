@@ -9,7 +9,7 @@ const { calculateValues } = require('../middlewares/middleware')
 const express = require('express')
 const app = express()
 
-app.post('/add-new-activity', calculateValues, (req, res) =>
+app.post('/create-new-activity', calculateValues, (req, res) =>
   createActivity(req, res),
 )
 app.get('/get-activities', (req, res) => getAllActivities(req, res))

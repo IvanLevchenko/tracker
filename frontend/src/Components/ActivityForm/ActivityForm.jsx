@@ -12,17 +12,25 @@ export default function ActivityForm({ onUpdateActivities }) {
 
   const handleActivitySubmit = (event) => {
     event.preventDefault()
-    createNewActivity({
-      startTime: startTimeRef.current.value,
-      finishTime: finishTimeRef.current.value,
-      distance: distanceTimeRef.current.value,
-      type: typeRef.current.value,
-    })
-    onUpdateActivities()
-    startTimeRef.current.value = ''
-    finishTimeRef.current.value = ''
-    distanceTimeRef.current.value = ''
-    typeRef.current.value = ''
+    if (
+      new Date(finishTimeRef.current.value) -
+        new Date(startTimeRef.current.value) >
+      0
+    ) {
+      createNewActivity({
+        startTime: startTimeRef.current.value,
+        finishTime: finishTimeRef.current.value,
+        distance: distanceTimeRef.current.value,
+        type: typeRef.current.value,
+      })
+      onUpdateActivities()
+      startTimeRef.current.value = ''
+      finishTimeRef.current.value = ''
+      distanceTimeRef.current.value = ''
+      typeRef.current.value = ''
+    } else {
+      alert('Please, choose correct date')
+    }
   }
 
   return (

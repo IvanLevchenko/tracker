@@ -116,6 +116,7 @@ function App() {
                     {...activitie}
                     months={months}
                     onDeleteActivity={deleteActivityHandler}
+                    key={activitie._id}
                   />
                 )
               })

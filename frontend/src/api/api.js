@@ -1,7 +1,7 @@
 import _axios from './axios'
 
 export const createNewActivity = (activityBody) => {
-  return _axios.post('/add-new-activity', activityBody, {
+  return _axios.post('/create-new-activity', activityBody, {
     headers: {
       'Content-Type': 'application/json',
     },
